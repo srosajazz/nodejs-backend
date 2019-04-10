@@ -35,4 +35,4 @@ app.use(express.urlencoded({ // autoriza o envio de arquivos
 app.use(require("./routes")); //importa nossas rotas
 app.use('/files', express.static(path.resolve(__dirname, '..', 'temp')));
 
-server.listen(3333);
+server.listen(process.env.PORT || 3333);
